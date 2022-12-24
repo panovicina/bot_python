@@ -60,9 +60,7 @@ class Catbot:
         result = "Получилось! Сегодня ты похож(а) на этого котика!"
         self.bot.send_message(message.chat.id, scanning, reply_markup=self.keyboard_continue)
         self.bot.send_message(message.chat.id, result, reply_markup=self.keyboard_continue)
-        file = str(random.randint(self.NUMBER_OF_RANDOM_PICS + 1,
-                                  self.NUMBER_OF_PICS - self.NUMBER_OF_RANDOM_PICS)) \
-               + '.jpeg'
+        file = str(random.randint(self.NUMBER_OF_RANDOM_PICS + 1, self.NUMBER_OF_PICS)) + '.jpeg'
 
         photo = 'https://storage.yandexcloud.net/kotiki/' + file
         self.bot.send_photo(message.chat.id, photo, reply_markup=self.keyboard_continue)
