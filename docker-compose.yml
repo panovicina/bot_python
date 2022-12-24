@@ -1,0 +1,6 @@
+version: '1'
+
+services:
+  bot:
+    container_name: telebot
+    build: .

@@ -2,6 +2,8 @@ import telebot
 from telebot import types
 import json
 import random
+import os
+from dotenv import load_dotenv
 
 
 class Catbot:
@@ -11,7 +13,8 @@ class Catbot:
 
     def __init__(self):
 
-        self.token = "5630994790:AAFzJ7ig0RDjYa3SAhRSwR-iH464UEmSSgQ"
+        load_dotenv()
+        self.token = os.getenv('TOKEN')
         self.bot = telebot.TeleBot(self.token, threaded=False)
 
         # Buttons
